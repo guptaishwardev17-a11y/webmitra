@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services & Pricing — WEBMITRA Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.plans-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:860px; margin:48px auto 0; text-align:left; }
+.plan { border:1px solid var(--border); border-radius:18px; padding:32px 28px; background:var(--white); position:relative; }
+.plan.featured { background:var(--black); border-color:var(--black); }
+.plan-pop { position:absolute; top:-12px; left:28px; background:var(--gold); color:white; font-size:11px; font-weight:700; padding:3px 12px; border-radius:980px; letter-spacing:.5px; }
+.plan-name { font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--body); margin-bottom:16px; }
+.plan.featured .plan-name { color:#6e6e73; }
+.plan-price { font-size:48px; font-weight:700; letter-spacing:-.005em; color:var(--black); line-height:1; margin-bottom:6px; }
+.plan.featured .plan-price { color:var(--gold); }
+.plan-price sub { font-size:20px; font-weight:400; vertical-align:baseline; }
+.plan-desc { font-size:14px; color:var(--body); margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid var(--border); line-height:1.5; }
+.plan.featured .plan-desc { color:#6e6e73; border-color:#3a3a3c; }
+.plan-feats { display:flex; flex-direction:column; gap:0; flex:1; margin-bottom:28px; }
+.plan-feats li { font-size:14px; color:var(--body); padding:9px 0; border-bottom:1px solid rgba(0,0,0,.04); display:flex; align-items:flex-start; gap:8px; line-height:1.4; }
+.plan.featured .plan-feats li { color:#a1a1a6; border-color:rgba(255,255,255,.05); }
+.plan-feats li::before { content:'✓'; font-size:10px; font-weight:700; color:#22C55E; background:rgba(34,197,94,.1); width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+.plan.featured .plan-feats li::before { color:var(--gold); background:rgba(191,135,0,.15); }
+
+.compare-wrap { max-width:860px; margin:0 auto; overflow-x:auto; }
+.ctable { width:100%; border-collapse:collapse; border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+.ctable th { background:var(--black); color:white; padding:14px 20px; font-size:12px; font-weight:600; letter-spacing:.5px; text-align:left; }
+.ctable th:not(:first-child){ text-align:center; }
+.ctable td { padding:12px 20px; font-size:14px; color:var(--body); border-bottom:1px solid var(--border); }
+.ctable tr:last-child td { border-bottom:none; }
+.ctable td:first-child { font-weight:500; color:var(--black); }
+.ctable td:not(:first-child){ text-align:center; }
+.ctable tr:hover td { background:var(--light); }
+.ck { color:#22C55E; font-weight:700; }
+.cx { color:var(--border); }
+
+@media(max-width:768px){ .plans-grid{grid-template-columns:1fr; max-width:400px; margin-left:auto; margin-right:auto;} }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">W</div>WEBMITRA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-ham" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMob">
+  <a href="index.html">Home</a>
+  <a href="services.html" class="active">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-top">
+  <p class="fade" style="font-size:17px;font-weight:600;color:var(--gold);margin-bottom:8px;">Pricing & Plans</p>
+  <h1 class="fade d1" style="font-size:clamp(36px,6vw,64px);font-weight:700;letter-spacing:-.005em;line-height:1.07;color:var(--black);">Simple, honest pricing.</h1>
+  <p class="fade d2" style="font-size:19px;color:var(--body);max-width:480px;margin:10px auto 0;line-height:1.5;">No hidden charges. No surprises. Questions? <a href="tel:+919918289106" style="color:var(--blue);">Call us.</a></p>
+</div>
+<hr class="apple-rule"/>
+
+<div style="background:var(--white);padding:64px 24px;">
+  <p class="fade" style="text-align:center;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--body);">Choose your plan</p>
+  <div class="plans-grid">
+    <div class="plan fade d1">
+      <div class="plan-name">Basic</div>
+      <div class="plan-price"><sub>₹</sub>4,999</div>
+      <p class="plan-desc">For small businesses who need a clean, professional online presence.</p>
+      <ul class="plan-feats"><li>Up to 5 pages</li><li>Mobile responsive</li><li>Contact form</li><li>Basic SEO</li><li>Google Maps</li><li>WhatsApp button</li><li>1 month support</li><li>5–7 day delivery</li></ul>
+      <a href="https://wa.me/919918289106?text=Hi!%20Interested%20in%20Basic%20Plan%20%E2%82%B94%2C999." target="_blank" class="btn btn-blue" style="width:100%;justify-content:center;font-size:15px;">Get Basic →</a>
+    </div>
+    <div class="plan featured fade d2">
+      <div class="plan-pop">Most Popular</div>
+      <div class="plan-name">Pro</div>
+      <div class="plan-price"><sub>₹</sub>9,999</div>
+      <p class="plan-desc">For growing businesses that need a powerful, feature-rich website.</p>
+      <ul class="plan-feats"><li>Up to 10 pages</li><li>Premium UI/UX</li><li>Custom animations</li><li>Full SEO</li><li>Google Analytics</li><li>Blog section</li><li>Speed optimized</li><li>3 months support</li><li>7–10 day delivery</li></ul>
+      <a href="https://wa.me/919918289106?text=Hi!%20Interested%20in%20Pro%20Plan%20%E2%82%B99%2C999." target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;font-size:15px;">Get Pro →</a>
+    </div>
+    <div class="plan fade d3">
+      <div class="plan-name">Custom</div>
+      <div class="plan-price" style="font-size:32px;padding-top:8px;">Let's talk</div>
+      <p class="plan-desc">For large businesses, e-commerce, or any unique project.</p>
+      <ul class="plan-feats"><li>Unlimited pages</li><li>E-Commerce store</li><li>Payment gateway</li><li>Admin panel / CMS</li><li>Custom features</li><li>API integrations</li><li>6 months support</li><li>Timeline per scope</li></ul>
+      <a href="https://wa.me/919918289106?text=Hi!%20I%20need%20a%20custom%20website.%20Can%20we%20discuss%3F" target="_blank" class="btn btn-blue" style="width:100%;justify-content:center;font-size:15px;background:var(--black);">Discuss Custom →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="apple-rule"/>
+
+<div style="background:var(--light);padding:64px 24px;">
+  <p class="fade" style="text-align:center;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--body);margin-bottom:32px;">Compare plans</p>
+  <div class="compare-wrap fade d1">
+    <table class="ctable">
+      <thead><tr><th>Feature</th><th>Basic ₹4,999</th><th>Pro ₹9,999</th><th>Custom</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile Responsive</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Contact Form</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>WhatsApp Button</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Basic SEO</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Advanced SEO</td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Google Analytics</td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Custom Animations</td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Blog Section</td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>E-Commerce</td><td><span class="cx">—</span></td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Admin Panel</td><td><span class="cx">—</span></td><td><span class="cx">—</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Free Support</td><td>1 month</td><td>3 months</td><td>6 months</td></tr>
+        <tr><td>Delivery</td><td>5–7 days</td><td>7–10 days</td><td>Per scope</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="apple-rule"/>
+<div style="background:var(--black);padding:80px 24px;text-align:center;">
+  <h2 class="fade" style="font-size:clamp(28px,4vw,48px);font-weight:700;color:white;letter-spacing:-.005em;margin-bottom:10px;">Not sure which plan?</h2>
+  <p class="fade d1" style="font-size:19px;color:#a1a1a6;max-width:400px;margin:0 auto 28px;">Talk to us for free. We'll recommend the right plan for your business.</p>
+  <div class="fade d2" style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center;">
+    <a href="https://wa.me/919918289106?text=Hi!%20Not%20sure%20which%20plan%20fits%20me." target="_blank" class="btn btn-gold">WhatsApp Free Consult</a>
+    <a href="tel:+919918289106" class="btn-ghost" style="color:#6e6e73;">Call now</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h5>WEBMITRA Solutions</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Basic — ₹4,999</a></li>
+        <li><a href="services.html">Pro — ₹9,999</a></li>
+        <li><a href="services.html">Custom</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More</h5>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+919918289106">+91 99182 89106</a></li>
+        <li><a href="https://wa.me/919918289106" target="_blank">WhatsApp</a></li>
+        <li><span style="font-size:13px;color:rgba(255,255,255,.65)">Lucknow, UP</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2024 WEBMITRA Solutions. All rights reserved.</p>
+    <p>
+      <a href="https://www.instagram.com/web_wizarrd?igsh=N2tucjRlenE1Nm1u" target="_blank" style="display:inline-flex; align-items:center; gap:6px; color:rgba(255,255,255,.4);">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="16" style="border-radius:3px; display:inline;" alt="Instagram"> Instagram
+      </a>
+      &nbsp;·&nbsp;
+      <a href="contact.html">Privacy Policy</a> · <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919918289106" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Portfolio — WEBMITRA Solutions</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:40px auto 0}
+.pc{display:block;border-radius:18px;overflow:hidden;border:1px solid var(--border);text-decoration:none;transition:.28s cubic-bezier(.4,0,.2,1);background:var(--white)}
+.pc:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.1);border-color:var(--gold)}
+.pc-img{height:200px;background:var(--bg,#eee);position:relative;overflow:hidden}
+.pc-ov{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.28s}
+.pc:hover .pc-ov{opacity:1}
+.pc-ov span{color:white;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.5);padding:7px 16px;border-radius:980px}
+.pc-mock{padding:20px 18px;width:100%}
+.pc-bar{height:8px;background:rgba(255,255,255,.28);border-radius:4px;margin-bottom:10px;width:68%}
+.pc-lines span{display:block;height:5px;background:rgba(255,255,255,.18);border-radius:3px;margin-bottom:6px}
+.pc-lines span:last-child{width:50%}
+.pc-body{padding:18px 20px 22px}
+.pc-cat{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--body);display:block;margin-bottom:6px}
+.pc-body h3{font-size:16px;font-weight:600;color:var(--black);margin-bottom:4px}
+.pc-body p{font-size:13px;color:var(--body);line-height:1.55}
+.pc-link{font-size:13px;color:var(--blue);margin-top:10px;display:inline-block}
+@media(max-width:860px){.port-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.port-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">W</div>WEBMITRA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-ham" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMob">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-top">
+  <p class="fade" style="font-size:17px;font-weight:600;color:var(--gold);margin-bottom:8px;">Our work</p>
+  <h1 class="fade d1" style="font-size:clamp(36px,6vw,64px);font-weight:700;letter-spacing:-.005em;line-height:1.07;color:var(--black);">Projects we've built.</h1>
+  <p class="fade d2" style="font-size:17px;color:var(--body);max-width:440px;margin:10px auto 0;">Click any project to visit the live website.</p>
+</div>
+<hr class="apple-rule"/>
+
+<div style="background:var(--white);padding:64px 24px;">
+  <div class="port-grid">
+    <a href="https://hotelomresidency.com" target="_blank" class="pc fade d1" style="--bg:linear-gradient(135deg,#1A237E,#3949AB)"><div class="pc-img"><div class="pc-ov"><span>Visit site ↗</span></div><div class="pc-mock"><div class="pc-bar"></div><div class="pc-lines"><span></span><span></span><span></span></div></div></div><div class="pc-body"><span class="pc-cat">Hospitality</span><h3>Hotel Om Residency</h3><p>Professional hotel website with room listings, amenities, and direct booking contact.</p><span class="pc-link">View live ↗</span></div></a>
+
+    <a href="https://chaimitra.in" target="_blank" class="pc fade d2" style="--bg:linear-gradient(135deg,#4E342E,#A1887F)"><div class="pc-img"><div class="pc-ov"><span>Visit site ↗</span></div><div class="pc-mock"><div class="pc-bar"></div><div class="pc-lines"><span></span><span></span><span></span></div></div></div><div class="pc-body"><span class="pc-cat">Food & Beverage</span><h3>Chai Mitra</h3><p>Brand website for a chai startup with menu, franchise info, and online presence.</p><span class="pc-link">View live ↗</span></div></a>
+
+    <a href="https://robotrestaurantindia.com" target="_blank" class="pc fade d3" style="--bg:linear-gradient(135deg,#0D47A1,#00BCD4)"><div class="pc-img"><div class="pc-ov"><span>Visit site ↗</span></div><div class="pc-mock"><div class="pc-bar"></div><div class="pc-lines"><span></span><span></span><span></span></div></div></div><div class="pc-body"><span class="pc-cat">Restaurant</span><h3>Robot Restaurant India</h3><p>Dynamic restaurant website showcasing India's first robot-served dining experience.</p><span class="pc-link">View live ↗</span></div></a>
+
+    <a href="https://www.ihg.com/crowneplaza/hotels/us/en/lucknow/lkols/hoteldetail?cm_mmc=GoogleMaps-_-CP-_-IN-_-LKOLS" target="_blank" class="pc fade d1" style="--bg:linear-gradient(135deg,#1B5E20,#43A047)"><div class="pc-img"><div class="pc-ov"><span>Visit site ↗</span></div><div class="pc-mock"><div class="pc-bar"></div><div class="pc-lines"><span></span><span></span><span></span></div></div></div><div class="pc-body"><span class="pc-cat">Hospitality</span><h3>Crowne Plaza Lucknow</h3><p>Premium hotel listing page for IHG's Crowne Plaza property in Lucknow, UP.</p><span class="pc-link">View live ↗</span></div></a>
+
+    <a href="https://www.citymaxhotels.com/" target="_blank" class="pc fade d2" style="--bg:linear-gradient(135deg,#880E4F,#E91E63)"><div class="pc-img"><div class="pc-ov"><span>Visit site ↗</span></div><div class="pc-mock"><div class="pc-bar"></div><div class="pc-lines"><span></span><span></span><span></span></div></div></div><div class="pc-body"><span class="pc-cat">Hospitality</span><h3>Citymax Hotels</h3><p>International hotel chain website with multi-property listings and booking integration.</p><span class="pc-link">View live ↗</span></div></a>
+  </div>
+  <div style="text-align:center;margin-top:60px;padding-top:48px;border-top:1px solid var(--border);" class="fade">
+    <p style="font-size:17px;color:var(--body);margin-bottom:16px;">Want a website like these?</p>
+    <a href="https://wa.me/919918289106?text=Hi!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="btn btn-blue">Start your project</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h5>WEBMITRA Solutions</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Basic — ₹4,999</a></li>
+        <li><a href="services.html">Pro — ₹9,999</a></li>
+        <li><a href="services.html">Custom</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More</h5>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+919918289106">+91 99182 89106</a></li>
+        <li><a href="https://wa.me/919918289106" target="_blank">WhatsApp</a></li>
+        <li><span style="font-size:13px;color:rgba(255,255,255,.65)">Lucknow, UP</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2024 WEBMITRA Solutions. All rights reserved.</p>
+    <p>
+      <a href="https://www.instagram.com/web_wizarrd?igsh=N2tucjRlenE1Nm1u" target="_blank" style="display:inline-flex; align-items:center; gap:6px; color:rgba(255,255,255,.4);">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="16" style="border-radius:3px; display:inline;" alt="Instagram"> Instagram
+      </a>
+      &nbsp;·&nbsp;
+      <a href="contact.html">Privacy Policy</a> · <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919918289106" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="js/main.js"></script>
+</body>
+</html>
